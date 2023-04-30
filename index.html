@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome!</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+      body {
+        background-image: url("https://source.unsplash.com/random/1920x1080/?dark,abstract");
+        background-size: cover;
+        background-position: center center;
+        background-color: #f0f0f0;
+        margin: 5rem;
+      }
+      .form-container {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        /* opacity: 0.8; */
+      }
+      .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .form-control:focus {
+        border-color: #007bff;
+        box-shadow: none;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+      .btn-primary:hover {
+        background-color: #0069d9;
+        border-color: #0062cc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>College Project Management Form</h2>
+      <form>
+        <div class="form-group">
+          <label for="project-id">Project ID</label>
+          <input
+            type="text"
+            class="form-control"
+            id="project-id"
+            placeholder="Enter Project ID"
+            onchange="getPro()"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="project-name">Project Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="project-name"
+            placeholder="Enter Project Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="assigned-to">Assigned To</label>
+          <input
+            type="text"
+            class="form-control"
+            id="assigned-to"
+            placeholder="Enter Assigned To"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="assignment-date">Assignment Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="assignment-date"
+            placeholder="Enter Assignment Date"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="deadline">Deadline</label>
+          <input
+            type="date"
+            class="form-control"
+            id="deadline"
+            placeholder="Enter Deadline"
+            required
+          />
+        </div>
+            <button type="button" class="btn btn-primary" id="save" onclick="saveData()" disabled>Save</button>
+            <button type="button" class="btn btn-secondary" id="change" onclick="changeData()" disabled>Change</button>
+            <button type="button" class="btn btn-danger" id="reset" onclick="resetForm()" disabled>Reset</button>
+      </form>
+    </div>
+    
+    <script type="text/javascript" src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  
+</body>
+</html>
